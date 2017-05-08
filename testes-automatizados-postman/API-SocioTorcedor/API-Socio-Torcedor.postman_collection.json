@@ -1,0 +1,602 @@
+{
+	"variables": [],
+	"info": {
+		"name": "API-Socio-Torcedor",
+		"_postman_id": "638a4966-761a-889b-c9bb-e79b307a2188",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1-Teste criação de times",
+			"description": "",
+			"item": [
+				{
+					"name": "Criar time 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"    ",
+									"",
+									"tests[\"Status code is 201\"] = responseCode.code === 201;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "localhost:8081/timedocoracao/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nome\" : \"time1\"\n   \n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Criar time 2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"    ",
+									"",
+									"tests[\"Status code is 201\"] = responseCode.code === 201;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "localhost:8081/timedocoracao/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nome\" : \"time2\"\n    \n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Criar time 3",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"    ",
+									"",
+									"tests[\"Status code is 201\"] = responseCode.code === 201;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "localhost:8081/timedocoracao/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nome\" : \"time3\"\n    \n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "2-Teste criação de torcedores",
+			"description": "",
+			"item": [
+				{
+					"name": "Criar torcedor 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"    ",
+									"",
+									"tests[\"Status code is 201\"] = responseCode.code === 201;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "localhost:8081/sociotorcedores/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nome\" : \"Torcedor1\",\n    \"email\":\"torcedor1@gmail.com\",\n\t\"dataNacimento\":\"1988-01-27\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Criar torcedor 2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"    ",
+									"",
+									"tests[\"Status code is 201\"] = responseCode.code === 201;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "localhost:8081/sociotorcedores/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nome\" : \"Torcedor2\",\n    \"email\":\"torcedor2@gmail.com\",\n\t\"dataNacimento\":\"1987-05-15\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Criar torcedor 3",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"    ",
+									"",
+									"tests[\"Status code is 201\"] = responseCode.code === 201;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "localhost:8081/sociotorcedores/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nome\" : \"Torcedor3\",\n    \"email\":\"torcedor3@gmail.com\",\n\t\"dataNacimento\":\"1986-10-20\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Criar torcedor 4",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"    ",
+									"",
+									"tests[\"Status code is 201\"] = responseCode.code === 201;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "localhost:8081/sociotorcedores/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nome\" : \"Torcedor4\",\n    \"email\":\"torcedor4@gmail.com\",\n\t\"dataNacimento\":\"1985-07-14\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Criar torcedor existente",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"    ",
+									"",
+									"tests[\"Status code is 409\"] = responseCode.code === 409;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "localhost:8081/sociotorcedores/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t \n\t\"nome\" : \"Torcedor4\",\n    \"email\":\"torcedor4@gmail.com\",\n\t\"dataNacimento\":\"1985-07-14\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "3-Teste recuperar campanhas  cadastradas",
+			"description": "",
+			"item": [
+				{
+					"name": "Recuperar todas as campanhas",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"    ",
+									"",
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "localhost:8080/campanhas/",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nome\" : \"campanha1\",\n    \"dataInicio\":\"2017-05-01\",\n\t\"dataFim\":\"2017-05-06\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "4-Asociar Campanhas com Time",
+			"description": "",
+			"item": [
+				{
+					"name": "Asociar Campanha 1 com Time 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"    ",
+									"",
+									"tests[\"Status code is 201\"] = responseCode.code === 201;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "localhost:8081/timecampanha/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nome\" : \"time1\",\n\t\"timeDoCoracao\" : {\"id\" : 1, \"nome\" : \"time1\"},\n\t\"idcampanha\" : 1\n   \n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Asociar Campanha 2 com Time 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"    ",
+									"",
+									"tests[\"Status code is 201\"] = responseCode.code === 201;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "localhost:8081/timecampanha/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nome\" : \"time1\",\n\t\"timeDoCoracao\" : {\"id\" : 1, \"nome\" : \"time1\"},\n\t\"idcampanha\" : 2\n   \n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Asociar Campanha 3 com Time 2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"    ",
+									"",
+									"tests[\"Status code is 201\"] = responseCode.code === 201;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "localhost:8081/timecampanha/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nome\" : \"time1\",\n\t\"timeDoCoracao\" : {\"id\" : 2, \"nome\" : \"time2\"},\n\t\"idcampanha\" : 3\n   \n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Asociar Campanha 4 com Time 3",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"    ",
+									"",
+									"tests[\"Status code is 201\"] = responseCode.code === 201;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "localhost:8081/timecampanha/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nome\" : \"time1\",\n\t\"timeDoCoracao\" : {\"id\" : 3, \"nome\" : \"time3\"},\n\t\"idcampanha\" : 4\n   \n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "5-Asociar time com torcedor",
+			"description": "",
+			"item": [
+				{
+					"name": "Asociar Time 1 com Torcedor 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"    ",
+									"",
+									"tests[\"Status code is 204\"] = responseCode.code === 204;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "localhost:8081/sociotorcedores/1",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nome\" : \"torcedor1\",\n\t\"email\" : \"marcoslozina3@gmail.com\",\n\t\"dataNacimento\" : \"1988-01-27\",\n\t\"timeDoCoracao\" : {\"id\" : 1,  \"nome\" : \"Chapecoense\"}\n   \n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Asociar Time 1 com Torcedor 2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"    ",
+									"",
+									"tests[\"Status code is 204\"] = responseCode.code === 204;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "localhost:8081/sociotorcedores/2",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nome\" : \"torcedor2\",\n\t\"email\" : \"torcedor2@gmail.com\",\n\t\"dataNacimento\" : \"1987-04-11\",\n\t\"timeDoCoracao\" : {\"id\" : 1,  \"nome\" : \"Chapecoense\"}\n   \n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Asociar Time 2 com Torcedor 3",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"    ",
+									"",
+									"tests[\"Status code is 204\"] = responseCode.code === 204;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "localhost:8081/sociotorcedores/3",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\t\"nome\" : \"torcedor3\",\n\t\"email\" : \"torcedor3@gmail.com\",\n\t\"dataNacimento\" : \"1985-10-05\",\n\t\"timeDoCoracao\" : {\"id\" : 2,  \"nome\" : \"Corinthians\"}\n   \n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Asociar Time 3 com Torcedor 4",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"    ",
+									"",
+									"tests[\"Status code is 204\"] = responseCode.code === 204;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "localhost:8081/sociotorcedores/4",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\t\"nome\" : \"torcedor4\",\n\t\"email\" : \"torcedor4@gmail.com\",\n\t\"dataNacimento\" : \"1986-06-05\",\n\t\"timeDoCoracao\" : {\"id\" : 3,  \"nome\" : \"Avai\"}\n   \n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

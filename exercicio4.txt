@@ -1,0 +1,20 @@
+O que é deadLock?
+Um deadlock um problema que pode acontecer em um software concorrente, se não é tratado no desenho. Basicamente um deadLock é um bloqueio simultâneo de duas o mais threads.
+Como acontece o bloqueio em um deadlock?
+A thread A bloqueia porque está esperando a thread B liberar um monitor de bloqueio, e a thread B bloqueia, pois está esperando a thread A liberar o mesmo monitor de bloqueio.
+Pode ocorrer que um deadLock tenha mais de duas threads implicada?
+Sim um deadlock pode involucrar mais de duas threads tornando a situação mais complexa.
+Como pode evitar-se o deadlock?
+Sincronizando os recursos (synchronized), usando os métodos wait(), notify()
+Quando sincronizar os recursos?
+Quando tenho mais de um thread acessando a dados que podem ser modificados, para ter certeza que duas threads não vão estar alterando o dado ao mesmo tempo. 
+O Bloqueio dos recursos afeta as variáveis de instância e locais?
+O problema está nas variáveis de instancia, já que cada thread criara uma cópia das variáveis locais. O sincronismo protege por instancia.
+O bloqueio de métodos estáticos e diferente do bloqueio de métodos no estáticos?
+O bloqueio de métodos estáticos o bloqueia os métodos de classe, e o bloqueio de métodos no estáticos bloqueia métodos de instancias.
+Como poderia se resolver um deadlock uma vês que aconteceu?
+Realizando um java thread dump e analisando as thread que estão com status=bloked
+O que é java thread dump?
+É um volcado de threads de Java em um arquivo para posterior análise.
+Quais ferramentas posso utilizar para fazer um um java thread dump ?
+Java 8 introduziu o utilitário jcmd.  O comando para gerar um java thread dump é: jcmd PID Thread.print. Outra ferramenta é VisualVM Profiler que pode-se utilizar para analisar a lentidão da aplicação e gerar um um java thread dump.

@@ -1,0 +1,17 @@
+O que é Stream e ParallelStreams ?
+Devido ao aumento do número de núcleos de CPU e ao menor custo de hardware que permite sistemas de cluster mais baratos, o processamento paralelo parece ser a próxima grande coisa Stream é a nova API de java 8 que simplifica a criação de processamento paralelo em colecções e arrays. 
+ParallelStreams é um conjunto de operações adicionadas que iteram sobre e substreams em paralelo e depois combinam os resultados.
+Quando usar ParallelStreams?
+Existe quatro (4) premissas que devemos considerar para usar o processamento paralelo.
+1)	S – source collection must be efficiently splittable: Se temos um ArrayList, HashMap ou plain array como stream-source a representação de dados internos é feita com base em uma matriz. O processamento paralelo funciona bem com esse tipo de stream-sources. 
+2)	N*Q – factor “number of elements * cost per element” should be large: A relação entre o número dos elementos e o custo de processamento deve ser ampla. Ou se temos um número de elementos muito grande e um custo por elementos não tão intensiva, o processamento paralelo compensa.
+3)	C – number of CPU Cores – more is better > 1 a must have: a CPU deve ter mais de um core para que o processamento paralelo seja eficiente. 
+4)	F – the per-element function has to be independente: existem requisitos para a função por elemento também. A função tem que ser:
+•	Independente: o que significa que a computação para cada elemento não deve depender ou impactar a de qualquer outro elemento.
+•	Não-interferência: o que significa que a função não irá modificar a fonte de dados subjacente durante o processamento.
+•	Stateless: ou sem estado, cada chamada da função é considerada independentes.
+Quando não usar ParallelStreams?
+1)	S – source collection must be efficiently splittable: stream-sources como LinkedList é mais complicado para dividir os elementos de dados. A implementação tem de passar por todos os elementos da primeira entrada para encontrar o elemento pode ser onde a divisão feita. Assim, por exemplo Linked executa mal para fluxos paralelos. 
+2)	N*Q – factor “number of elements * cost per element” should be large: Quando a coleção de dados não é grande o suficiente não compensa a sobrecarga algorítmica do processamento paralelo
+3)	C – number of CPU Cores – more is better > 1 a must have: Em uma única máquina de núcleo, os fluxos paralelos sempre apresentam pior que os fluxos em série em razão da sobrecarga de gerenciamento. 
+4)	F – the per-element function has to be independente Quando a função está chamando alguma funcionalidade sincronizada, então você provavelmente não teria nenhum benefício de paralelizar seu fluxo devido que seus fluxos paralelos muitas vezes esperar nesta barreira de sincronização. O mesmo problema ocorre quando você está chamando bloqueio de operações de e / s. E para que o assunto usando uma fonte baseada em I / O como fluxo é também algo conhecido para não executar bem porque os dados são lidos seqüenciais, então essa fonte é quase indivisível.
